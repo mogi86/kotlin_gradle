@@ -4,7 +4,7 @@ package example.collection
  * Collection is class to check the behavior about Collection.
  */
 class Collection {
-    val books = listOf<Book>(
+    private val books = listOf(
             Book("java book", 2000),
             Book("kotlin book", 2300),
             Book("golang book", 2100),
