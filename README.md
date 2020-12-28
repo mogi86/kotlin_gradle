@@ -4,9 +4,9 @@ This repository is for studying [Kotlin](https://kotlinlang.org/) and [Gradle](h
 
 ## Requirements
 
-* `Kotlin 1.4.0+`
+* `Kotlin 1.4.21+`
 * `Gradle 6.6.1+`
-* `JDK8`
+* `JDK15`
 
 ## Getting Started
 
