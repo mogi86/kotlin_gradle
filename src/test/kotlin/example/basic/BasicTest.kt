@@ -1,7 +1,9 @@
 package example.basic
 
 import example.basic.Basic.Companion.isString
+import example.basic.Basic.Companion.printList
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.Arguments.arguments
@@ -25,5 +27,10 @@ internal class BasicTest {
     fun testIsString(param: Any, expected: Boolean) {
         val result = isString(param)
         assertEquals(expected, result)
+    }
+
+    @Test
+    fun testPrintList() {
+        assertEquals("one two three ", printList())
     }
 }
