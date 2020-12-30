@@ -13,13 +13,13 @@ This repository is for studying [Kotlin](https://kotlinlang.org/) and [Gradle](h
 ### Build
 
 ```bash
-$ gradle build
+$ make build
 ```
 
 ### Test
 
 ```bash
-$ gradle test
+$ make test
 ```
 
 ### Run single `JAR`
@@ -27,11 +27,18 @@ $ gradle test
 * Create single `JAR` by using [Gradle Shadow](https://github.com/johnrengelman/shadow).
 
 ```bash
-$ gradle shadowJar
+$ make shadowJar
 ```
 
 * Run single `JAR`
 
 ```bash
-$ java -jar  build/libs/kotlin_gradle-1.0-SNAPSHOT-all.jar
+$ make run
+```
+
+### Run on docker container
+
+```bash
+$ docker build -t my-kotlin-app .
+$ docker run -it --rm --name my-running-app my-kotlin-app
 ```
