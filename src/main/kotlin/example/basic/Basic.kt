@@ -19,5 +19,14 @@ class Basic {
 
             return s
         }
+
+        // when expression
+        // see: https://kotlinlang.org/docs/reference/basic-syntax.html#using-when-expression
+        fun isString2(value: Any): Boolean {
+            return when (value) {
+                is String -> true
+                else -> false
+            }
+        }
     }
 }

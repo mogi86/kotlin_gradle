@@ -1,6 +1,7 @@
 package example.basic
 
 import example.basic.Basic.Companion.isString
+import example.basic.Basic.Companion.isString2
 import example.basic.Basic.Companion.printList
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -20,6 +21,15 @@ internal class BasicTest {
                     arguments(1, false),
             )
         }
+
+        @JvmStatic
+        fun isString2ListProvider(): Stream<Arguments> {
+            return Stream.of(
+                    arguments("apple", true),
+                    arguments("", true),
+                    arguments(1, false),
+            )
+        }
     }
 
     @ParameterizedTest
@@ -32,5 +42,12 @@ internal class BasicTest {
     @Test
     fun testPrintList() {
         assertEquals("one two three ", printList())
+    }
+
+    @ParameterizedTest
+    @MethodSource("isString2ListProvider")
+    fun testIsString2(param: Any, expected: Boolean) {
+        val result = isString2(param)
+        assertEquals(expected, result)
     }
 }
