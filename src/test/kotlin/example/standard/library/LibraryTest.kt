@@ -30,4 +30,9 @@ internal class LibraryTest {
         assertEquals(expectedFirst, first)
         assertEquals(expectedSecond, second)
     }
+
+    @Test
+    fun testCompare() {
+        assertEquals(true, Library.compare())
+    }
 }
