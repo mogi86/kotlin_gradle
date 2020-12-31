@@ -28,5 +28,19 @@ class Collection {
             // or `null` if there are no elements.
             return books.maxByOrNull { it.price }
         }
+
+        // Set
+        // see: https://kotlinlang.org/docs/reference/collections-overview.html#set
+        //
+        // Set stores unique elements
+        // It seems that duplicated value is removed
+        fun useSet(): Set<Int> {
+            return setOf(1, 2, 3, 4, 4)
+        }
+
+        // List
+        fun useList(): List<Int> {
+            return listOf(1, 2, 3, 4, 4)
+        }
     }
 }

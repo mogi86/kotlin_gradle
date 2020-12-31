@@ -16,4 +16,20 @@ internal class CollectionTest {
 
         assertEquals(expected, result)
     }
+
+    @Test
+    fun testUseSet() {
+        val result = Collection.useSet()
+        val expected = "[1, 2, 3, 4]"
+
+        assertEquals(expected, result.toString())
+    }
+
+    @Test
+    fun testUseList() {
+        val result = Collection.useList()
+        val expected = "[1, 2, 3, 4, 4]"
+
+        assertEquals(expected, result.toString())
+    }
 }
