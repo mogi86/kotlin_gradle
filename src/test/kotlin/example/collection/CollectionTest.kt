@@ -12,8 +12,7 @@ internal class CollectionTest {
                 2300
         )
 
-        val collection = Collection()
-        val result = collection.findMaxPrice()
+        val result = Collection.findMaxPrice()
 
         assertEquals(expected, result)
     }
