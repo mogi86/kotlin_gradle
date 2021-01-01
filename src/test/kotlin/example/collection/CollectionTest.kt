@@ -32,4 +32,18 @@ internal class CollectionTest {
 
         assertEquals(expected, result.toString())
     }
+
+    @Test
+    fun testGenerateRange() {
+        val result = Collection.generateRange()
+
+        assertEquals("Coordinate(x=0, y=0)..Coordinate(x=10, y=15)", result.toString())
+    }
+
+    @Test
+    fun testPrintProgression() {
+        val result = Collection.printProgression()
+
+        assertEquals("1 3 5 7 9 ", result)
+    }
 }

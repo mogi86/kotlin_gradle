@@ -42,5 +42,29 @@ class Collection {
         fun useList(): List<Int> {
             return listOf(1, 2, 3, 4, 4)
         }
+
+        data class Coordinate(val x: Int, val y: Int): Comparable<Coordinate> {
+            override fun compareTo(other: Coordinate): Int {
+                return x - y
+            }
+        }
+
+        // Range
+        // see: https://kotlinlang.org/docs/reference/ranges.html
+        fun generateRange(): ClosedRange<Coordinate> {
+            return Coordinate(0, 0)..Coordinate(10, 15)
+        }
+
+        // Progression
+        // see: https://kotlinlang.org/docs/reference/ranges.html#progression
+        //
+        // can use "step"
+        fun printProgression(): String {
+            var s = ""
+            for (i in 1..10 step 2) {
+                s += "$i "
+            }
+            return s
+        }
     }
 }
