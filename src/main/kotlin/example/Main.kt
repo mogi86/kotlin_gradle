@@ -1,5 +1,6 @@
 package example
 
+import example.basic.Sub
 import example.classes.Sample
 import example.data.*
 import example.sequences.Sequences
@@ -21,4 +22,7 @@ fun main() {
     val sample = Sample("Ken")
     println("----------------------")
     println(sample.toString())
+
+    println("----------------------")
+    Sub()
 }
