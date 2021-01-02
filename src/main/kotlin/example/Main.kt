@@ -37,14 +37,12 @@ fun main() {
     println("----------------------")
     println("[Scope function]")
     println("----------------------")
-    val animal1 = Animal("Dog", "wataame", 1)
-    println(animal1.toString())
-    println("----------------------")
-    animal1.let {
+    Animal("Dog", "wataame", 1).let {
+        println(it.toString())
         it.changeName("mofumofu")
         it.incrementAge()
+        println(it.toString())
     }
-    println(animal1.toString())
 
     println("----------------------")
     println("[End]")
