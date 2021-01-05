@@ -13,5 +13,22 @@ class Extension {
             }
             return this
         }
+
+        fun getMessage(): String {
+            val message = Message()
+            return message.get()
+        }
+
+        // Extension function can't override member function
+        private fun Message.get(): String {
+            return "Extension function"
+        }
+    }
+}
+
+// Extension function can't override member function
+class Message {
+    fun get(): String {
+        return "Message function"
     }
 }

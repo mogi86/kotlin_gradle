@@ -14,4 +14,12 @@ internal class ExtensionTest {
 
         assertEquals(expected, result)
     }
+
+    @Test
+    fun getMessage() {
+        val result = Extension.getMessage()
+        val expected = "Message function"
+
+        assertEquals(expected, result)
+    }
 }
