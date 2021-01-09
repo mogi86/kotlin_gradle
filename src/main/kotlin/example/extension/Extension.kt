@@ -23,6 +23,19 @@ class Extension {
         private fun Message.get(): String {
             return "Extension function"
         }
+
+        // Nullable receiver
+        private fun Message?.toString(): String {
+            if (this == null) {
+                return "null object"
+            }
+
+            return "Message Class"
+        }
+
+        fun toStringMessage(message: Message?): String {
+            return message.toString()
+        }
     }
 }
 

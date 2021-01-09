@@ -22,4 +22,17 @@ internal class ExtensionTest {
 
         assertEquals(expected, result)
     }
+
+    @Test
+    fun toStringMessage() {
+        val result = Extension.toStringMessage(null)
+        val expected = "null object"
+
+        assertEquals(expected, result)
+
+        val result2 = Extension.toStringMessage(Message())
+        val expected2 = "Message Class"
+
+        assertEquals(expected2, result2)
+    }
 }
