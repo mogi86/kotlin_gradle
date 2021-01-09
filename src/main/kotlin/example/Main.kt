@@ -3,6 +3,7 @@ package example
 import example.basic.Sub
 import example.classes.Sample
 import example.data.*
+import example.enum.Fruits
 import example.scope.Animal
 import example.scope.Animal2
 import example.sequences.Sequences
@@ -74,6 +75,15 @@ fun main() {
         it.name
     }
     println("output of let: $name")
+
+    // Enum Class
+    println("----------------------")
+    println("[Enum Class]")
+    println("----------------------")
+    val fruits = Fruits.APPLE
+    println(fruits)
+    println(Fruits.values())
+    println(Fruits.valueOf("APPLE").printName())
 
     println("----------------------")
     println("[End]")
