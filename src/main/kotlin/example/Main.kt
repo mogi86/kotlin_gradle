@@ -6,6 +6,8 @@ import example.data.*
 import example.enum.Fruits
 import example.scope.Animal
 import example.scope.Animal2
+import example.sealed.Car
+import example.sealed.sound
 import example.sequences.Sequences
 
 fun main() {
@@ -84,6 +86,12 @@ fun main() {
     println(fruits)
     println(Fruits.values())
     println(Fruits.valueOf("APPLE").printName())
+
+    // Sealed Class
+    println("----------------------")
+    println("[Sealed Class]")
+    println("----------------------")
+    println(sound(Car.SmallCar("test")))
 
     println("----------------------")
     println("[End]")
