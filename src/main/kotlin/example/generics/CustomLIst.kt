@@ -25,3 +25,15 @@ fun <T> List<T>.filter2(predicate: (T) -> Boolean): List<T> {
 
     return list
 }
+
+// Upper Bound
+//
+// see: https://kotlinlang.org/docs/reference/generics.html#upper-bounds
+fun <T : Int> List<T>.sum(): Int {
+    var total = 0
+    for (element in this) {
+        total += element
+    }
+
+    return total
+}

@@ -25,4 +25,14 @@ internal class CustomLIstTest {
 
         assertEquals(expected, result)
     }
+
+    @Test
+    fun sum() {
+        val list = listOf(1, 3, 5, 7, 9)
+
+        val expected = 25
+        val result = list.sum()
+
+        assertEquals(expected, result)
+    }
 }
