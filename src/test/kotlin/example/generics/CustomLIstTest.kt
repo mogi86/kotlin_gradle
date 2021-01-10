@@ -1,9 +1,6 @@
 package example.generics
 
-import org.hamcrest.Matcher
-import org.hamcrest.MatcherAssert
 import org.hamcrest.MatcherAssert.assertThat
-import org.hamcrest.Matchers.containsInAnyOrder
 import org.hamcrest.Matchers.samePropertyValuesAs
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
