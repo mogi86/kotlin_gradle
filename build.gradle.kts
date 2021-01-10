@@ -17,6 +17,8 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.0.0-M4")
+
+    testImplementation("org.hamcrest:hamcrest:2.2")
 }
 
 tasks {

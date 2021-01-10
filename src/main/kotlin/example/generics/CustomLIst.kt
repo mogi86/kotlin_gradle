@@ -1,5 +1,6 @@
 package example.generics
 
+import java.lang.IllegalStateException
 import java.util.function.BiPredicate
 
 // see: https://kotlinlang.org/docs/reference/generics.html
@@ -29,6 +30,9 @@ fun <T> List<T>.filter2(predicate: (T) -> Boolean): List<T> {
 // Upper Bound
 //
 // see: https://kotlinlang.org/docs/reference/generics.html#upper-bounds
+//
+// Actually, "<T : Int> List<T>.sum()" is able to be "List<Int>.sum()".
+// Because "Int" is a final type.
 fun <T : Int> List<T>.sum(): Int {
     var total = 0
     for (element in this) {
@@ -36,4 +40,30 @@ fun <T : Int> List<T>.sum(): Int {
     }
 
     return total
+}
+
+fun check(list: Collection<Any>): String {
+    // if use "return list is List<Int>", below warning occur and cannot compile
+    // "Cannot check for instance of erased type: List<Int>"
+    //return list is List<Int>
+
+    // Star Projection
+    return if (list is List<*>) {
+        "this is list"
+    } else {
+        "this isn't list"
+    }
+}
+
+fun check2(list: Collection<Int>): String {
+    // Can check
+    return if (list is List<Int>) {
+        "this is list"
+    } else {
+        "this isn't list"
+    }
+}
+
+fun convert(list: Collection<Any>): List<Int> {
+    return list as? List<Int> ?: throw IllegalStateException("cannot convert")
 }

@@ -1,8 +1,12 @@
 package example.generics
 
+import org.hamcrest.Matcher
+import org.hamcrest.MatcherAssert
+import org.hamcrest.MatcherAssert.assertThat
+import org.hamcrest.Matchers.containsInAnyOrder
+import org.hamcrest.Matchers.samePropertyValuesAs
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
 
 internal class CustomLIstTest {
 
@@ -34,5 +38,15 @@ internal class CustomLIstTest {
         val result = list.sum()
 
         assertEquals(expected, result)
+    }
+
+    @Test
+    fun convert() {
+        val list = listOf("1", "2", "3")
+
+        val expected = listOf(1, 2, 3)
+        val result = convert(list)
+
+        assertThat(result, samePropertyValuesAs(expected))
     }
 }
