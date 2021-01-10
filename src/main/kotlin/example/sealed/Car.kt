@@ -15,4 +15,3 @@ fun sound(car: Car): String = when (car) {
     is Car.SmallCar -> "small sound"
     is Car.BigCar -> "big sound"
 }
-
